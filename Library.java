@@ -94,14 +94,23 @@ public class Library extends Building{
       collection.forEach(
             (k, v) -> System.out.println("Book: " + k + ", Available: " + v));
     }
+
+    /**show interactive options
+  */
     public void showOptions() {
       System.out.println("Available options at " + this.name + ":\n + returnBook() \n + removeTitle() \n + addTitle() \n + printCollection() \n + checkOut() \n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)");
     }
 
+    /**go up n floors on elevator
+    * @param int n how many flights we ascend
+    */
     public void goUp(int n) {
       this.goToFloor(this.activeFloor + n);
     }
 
+    /**go down n floors on elevator
+    * @param int n how many flights we descend
+    */  
     public void goDown(int n) {
       this.goToFloor(this.activeFloor - n);
     }
@@ -116,9 +125,9 @@ public class Library extends Building{
       neilson.printCollection();
       neilson.returnBook("Soc");
       neilson.printCollection();
-      //neilson.enter();
+      neilson.enter();
       neilson.goToFloor(2);
-      neilson.goToFloor(4);
+      neilson.goUp(1);
       
     }
   

@@ -64,9 +64,16 @@ public class Cafe extends Building{
         this.nCreams=nCreams;
         this.nCups=nCups;
     }
+
+    /**show interactive options
+    */
     public void showOptions() {
         System.out.println("Available options at " + this.name + ":\n + sellCoffee() \n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)");
     }
+    
+    /**dont to floor because we don't have one, throw correct exception
+     * @param int destination floor number
+    */
     public void goToFloor(int floorNum) {
         if (this.activeFloor == -1) {
             throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");

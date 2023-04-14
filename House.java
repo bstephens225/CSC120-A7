@@ -57,10 +57,16 @@ public String moveOut(String name){
 public boolean isResident(String person){
   return residents.contains(person);
 }
+
+/**show interactive options
+*/
 public void showOptions() {
   System.out.println("Available options at " + this.name + ":\n + moveOut() \n + moveIn() \n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)");
 }
 
+/**go to floor on elevator if house has
+ * @param int destination floor number
+*/
 public void goToFloor(int floorNum) {
   if(hasElev==true){
     super.goToFloor(floorNum);
@@ -73,11 +79,16 @@ public void goToFloor(int floorNum) {
   }
 }
 
+/**go up n floors on elevator
+ * @param int n how many flights we ascend
+*/
 public void goUp(int n) {
   this.goToFloor(this.activeFloor + n);
 }
   
-
+/**go down n floors on elevator
+ * @param int n how many flights we descend
+*/
 public void goDown(int n) {
   this.goToFloor(this.activeFloor + n);
 }

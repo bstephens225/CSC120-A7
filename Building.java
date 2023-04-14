@@ -66,6 +66,9 @@ public class Building {
         return null; // We're outside now, so the building is null
     }
 
+    /**go to floor on elevator
+     * @param int destination floor number
+    */
     public void goToFloor(int floorNum) {
         if (this.activeFloor == -1) {
             throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");
@@ -77,14 +80,18 @@ public class Building {
         this.activeFloor = floorNum;
     }
 
+    //go up 1 floor 
     public void goUp() {
         this.goToFloor(this.activeFloor + 1);
     }
 
+    //go down 1 floor 
     public void goDown() {
         this.goToFloor(this.activeFloor - 1);
     }
 
+    /**show interactive options
+    */
     public void showOptions() {
         System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)");
     }
