@@ -56,11 +56,11 @@ public class CampusMap {
 
         //houses
         ArrayList<String> northropRes = new ArrayList<String>();
-        myMap.addBuilding(new House("Northrop", "49 Elm Street, Northampton, MA 01060", 4,northropRes,true));
+        myMap.addBuilding(new House("Northrop", "49 Elm Street, Northampton, MA 01060", 4,northropRes,true,true));
         ArrayList<String> parsonsRes = new ArrayList<String>();
-        myMap.addBuilding(new House("Parsons", "Parsons House, 24 Henshaw Ave, Northampton, MA 01060", 5,parsonsRes,false));
+        myMap.addBuilding(new House("Parsons", "Parsons House, 24 Henshaw Ave, Northampton, MA 01060", 5,parsonsRes,false,false));
         ArrayList<String> gillettRes = new ArrayList<String>();
-        myMap.addBuilding(new House("Gillett", "47 Elm Street, Northampton, MA 01060", 5,gillettRes,true));
+        myMap.addBuilding(new House("Gillett", "47 Elm Street, Northampton, MA 01060", 5,gillettRes,true,true));
 
         //cafes
         myMap.addBuilding(new Cafe("Compass Cafe","Neilson Library",2,70,30,10,15));

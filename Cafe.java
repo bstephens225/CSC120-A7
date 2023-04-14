@@ -7,6 +7,7 @@ public class Cafe extends Building{
     private int nSugarPackets; // The number of sugar packets remaining in inventory
     private int nCreams; // The number of "splashes" of cream remaining in inventory
     private int nCups; // The number of cups remaining in inventory
+    private int nPizza; // The number of slices remaining in inventory
     
     
     public Cafe(String name, String address, int nFloors, int coffee, int sugar, int cream, int cups) {
@@ -17,7 +18,26 @@ public class Cafe extends Building{
         nCups=cups;
         System.out.println("You have built a cafe: ☕");
     }
-    
+    //empty cafe constructor
+    public Cafe(String name, String address, int nFloors) {
+        super(name, address, nFloors);
+        nCoffeeOunces=0;
+        nSugarPackets=0;
+        nCreams=0;
+        nCups=0;
+        System.out.println("You have built a cafe: ☕");
+    }
+    //cafe/pizzeria constructor
+    public Cafe(String name, String address, int nFloors, int coffee, int sugar, int cream, int cups,int pizza) {
+        super(name, address, nFloors);
+        nCoffeeOunces=coffee;
+        nSugarPackets=sugar;
+        nCreams=cream;
+        nCups=cups;
+        nPizza=pizza;
+        System.out.println("You have built a cafe: ☕");
+    }
+
     /**sell a coffee/ remove ingredients from inventory
      * @param int ounces of coffee
      * @param int number of sugar packets
